@@ -1,0 +1,298 @@
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    min-height: 100vh;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    margin-right: 8px;
+    width: 40px;
+    height: 40px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #1d4ed8;
+}
+
+.logo .highlight {
+    color: #3b82f6;
+}
+
+.nav-icons a {
+    /* display: flex; */
+    width: 34px;
+    height: 34px;
+    padding: 6px;
+    stroke: #1d4ed8;
+    background-color: #3683f0;
+    color: #fffffc;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+.nav-icons  img {
+    /* display: flex; */
+    width: 34px;
+    height: 34px;
+    padding: 6px;
+    /* stroke: #1d4ed8; */
+    /* background-color: #3683f0; */
+    /* color: #fffffc; */
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    right: 15px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+
+
+main {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.section {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.section.md {
+    grid-template-columns: 1fr 1fr;
+}
+
+.card {
+    height: 15rem;
+    border-radius: 20px;
+    border: 1px solid #909091;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    padding: 0.5px;
+    border-radius: 8px 8px 0 0;
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+.card-header h3{
+    padding-left: 30px;
+    font-size: 20px;
+}
+
+.blue-background {
+    background-color: #1d4ed8;
+}
+
+.black-background {
+    background-color: black;
+}
+
+.white-text {
+    color: white;
+}
+
+.card-body {
+    padding: 16px;
+    font-size: 12px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.profile .avatar {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.profile .avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 16px;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat .number {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.session {
+    display: flex;
+    gap: 16px;
+}
+
+.inputs {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.inputs input {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #e5e7eb;
+}
+
+.start-session-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 16px;
+    background-color: #1d4ed8;
+    color: white;
+    border-radius: 4px;
+    margin-top: 16px;
+    width: 30%;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    left: 20rem;
+    top: -2rem;
+}
+
+.start-session-button:hover {
+    background-color: #1e40af;
+}
+
+.feedback-placeholder,
+.course-progress-placeholder {
+    height: max-content;
+    background-color: #e5e7eb;
+    border-radius: 4px;
+}
+
+
+.course-progress-placeholder ul{
+    display: flex;
+    list-style: none;
+    /* gap: 22%; */
+    padding: 10px;
+    background: #000000cc;
+    border-radius: 30px;
+}
+
+.course-progress-placeholder ul li{
+    color: white;
+    font-size: 12px;
+    border-right: 2px solid white;
+    /* padding: 0px 0  */
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+    
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+    .header {
+        padding: 10px;
+    }
+
+    .header .logo h1 {
+        font-size: 0.875rem;
+    }
+
+    .header .nav-icons a {
+        width: 24px;
+        height: 24px;
+        padding: 4px;
+    }
+
+    .menu {
+        transform: translateX(-100%);
+    }
+
+    .menu.open {
+        transform: translateX(0);
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    main {
+        margin-left: 0;
+    }
+
+    .card-container {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    nav {
+        font-size: 16px;
+        padding: 15px;
+    }
+}

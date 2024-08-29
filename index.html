@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="container">
+
+        <header class="header">
+            <div class="logo">
+                <img src="Deep.png" alt="Logo" />
+                <h1>
+                    DEEP <span class="highlight">THOUGHT</span>
+                </h1>
+            </div>
+            <div class="nav-icons">
+                <a href="home.html"><i class="fa-solid fa-house"></i></a>
+                <a href="myassests.html"><i class="fa-solid fa-binoculars"></i></a>
+                <a href="editprofile.html"><i class="fa-solid fa-screwdriver-wrench"></i></a>
+                <a href="notification.html"><i class="fa-solid fa-bell"></i></a>
+                <a href=""><i class="fa-solid fa-user"></i></a>
+                <div class="dropdown">
+                    <button id="dropdownButton"
+                        style="background-color: transparent; border:none; margin-left: 20px; cursor: pointer; font-size: 20px;">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </button>
+                    <div id="dropdownMenu" class="dropdown-content" style="display: none;">
+                        <a style="background:none; margin-bottom: 18px; color: #1d4ed8" href="#"><i
+                                class="fa-solid fa-right-from-bracket"></i>Logout</a>
+                        <a style="background:none; margin-bottom: 18px; color: #1d4ed8;" href="#">Parent Dashboard</a>
+                        <a style="background:none; margin-bottom: 18px; color: #1d4ed8;" href="#">Batches</a>
+                        <a style="background:none; margin-bottom: 18px; color: #1d4ed8;" href="#">Session</a>
+                        <a style="background:none; margin-bottom: 18px; color: #1d4ed8;" href="#">Articles</a>
+                        <a style="background:none; margin-bottom: 18px; color: #1d4ed8;" href="#">Quizzes</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="section">
+                <div class="card">
+                    <div class="card-header blue-background white-text">
+                        <h3>Hello!</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="profile">
+                            <span class="avatar">
+                                <img alt="User Avatar" src="Deep.png" />
+                            </span>
+                            <p>
+                                I've always loved the Victorian period in English literature. Even as a kid, Dickens
+                                captured my imagination more thoroughly than the Harry Potter stories or anything else.
+                            </p>
+                        </div>
+                        <div class="stats">
+                            <div class="stat">
+                                <p class="number">0</p>
+                                <p>Assets Created</p>
+                            </div>
+                            <div class="stat">
+                                <p class="number">0</p>
+                                <p>Sessions Attended</p>
+                            </div>
+                            <div class="stat">
+                                <p class="number">0</p>
+                                <p>New Comments</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header blue-background white-text">
+                        <h3>Instant Session</h3>
+                    </div>
+                    <div class="card-body" style="padding: 30px;">
+                        <div class="session">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                style="background-color: rgb(55, 96, 230) ;border-radius: 20px; padding: 26px;"
+                                width=" 60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            <div class="inputs">
+                                <input type="text" placeholder="Topic" />
+                                <input type="text" placeholder="Teaser (Optional)" />
+                            </div>
+                        </div>
+                        <button class="start-session-button">
+                            Start Session
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section2" style="display:flex; gap:20px">
+                <div class="card" style="width: 35%;">
+                    <div class="card-header black-background white-text">
+                        <h3>Feedback Received</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="feedback-placeholder"></div>
+                    </div>
+                </div>
+
+                <div class="card" style="width: 70%;">
+                    <div class="card-header blue-background white-text"
+                        style="display: flex; justify-content: space-between; height: 45px;">
+                        <button class="button"
+                            style="background: white; border:none; height: 45px; display: flex; align-items: center; justify-content: center; width: 50%;"
+                            onclick="changeBackgroundColor(this)">
+                            <h3>My Upcoming Sessions</h3>
+                        </button>
+                        <button class="button"
+                            style="background:transparent; border:none; height: 44px; display: flex; align-items: center; justify-content: center; width: 50%;"
+                            onclick="changeBackgroundColor(this)">
+                            <h3>My Previous Sessions</h3>
+                        </button>
+                    </div>
+                    <div class="card-body">
+                        <div class="course-progress-placeholder">
+                            <ul>
+                                <li>
+                                    <h3>S.no</h3>
+                                </li>
+                                <li>
+                                    <h3>Session Topic</h3>
+                                </li>
+                                <li>
+                                    <h3>Date and Time</h3>
+                                </li>
+                                <li>
+                                    <h3>Action</h3>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- <script src="script.js"></script> -->
+    <script>
+
+        function changeBackgroundColor(button) {
+            // Find all buttons with the class "button" within the header
+            let buttons = document.querySelectorAll(".card-header .button");
+
+            // Reset the background of all buttons
+            buttons.forEach(btn => btn.style.background = "transparent");
+
+            // Set the background of the clicked button to white
+            button.style.background = "white";
+        }
+        // This function toggles the dropdown menu
+        document.getElementById("dropdownButton").addEventListener("click", function () {
+            const dropdownMenu = document.getElementById("dropdownMenu");
+            if (dropdownMenu.style.display === "none" || dropdownMenu.style.display === "") {
+                dropdownMenu.style.display = "block";
+            } else {
+                dropdownMenu.style.display = "none";
+            }
+        });
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('#dropdownButton') && !event.target.closest('.dropdown')) {
+                const dropdowns = document.getElementsByClassName("dropdown-content");
+                for (let i = 0; i < dropdowns.length; i++) {
+                    const openDropdown = dropdowns[i];
+                    if (openDropdown.style.display === "block") {
+                        openDropdown.style.display = "none";
+                    }
+                }
+            }
+        };
+    </script>
+</body>
+
+</html>
